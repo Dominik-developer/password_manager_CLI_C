@@ -1,14 +1,14 @@
 #ifndef PASSWORD_MANAGER_H
 #define PASSWORD_MANAGER_H
 
-#define MAX_STRING_SIZE_25 25
-#define MAX_STRING_SIZE_50 50
+#define MAX_STRING_SIZE_SMALL 25
+#define MAX_STRING_SIZE_LARGE 50
 
 typedef struct 
 {
-    char website[MAX_STRING_SIZE_50];
-    char login[MAX_STRING_SIZE_50];
-    char password[MAX_STRING_SIZE_50];
+    char website[MAX_STRING_SIZE_SMALL];
+    char login[MAX_STRING_SIZE_LARGE];
+    char password[MAX_STRING_SIZE_LARGE];
 
 } Credentials;
 
