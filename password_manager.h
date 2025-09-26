@@ -6,7 +6,7 @@
 
 typedef struct 
 {
-    char website[MAX_STRING_SIZE_SMALL];
+    char domain[MAX_STRING_SIZE_SMALL];
     char login[MAX_STRING_SIZE_LARGE];
     char password[MAX_STRING_SIZE_LARGE];
 
