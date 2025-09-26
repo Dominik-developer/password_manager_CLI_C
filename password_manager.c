@@ -18,18 +18,13 @@ void addCredentials() {
     Credentials c; // creat variable of structure
 
     printf("Enter website (domain): ");
-    fgets(c.domain, MAX_STRING_SIZE_SMALL, stdin);
-    c.domain[strcspn(c.domain, "\n")] = 0; // delete newline
-
+    scanf(" %49[^\n]", c.domain);
 
     printf("Enter login: ");
-    fgets(c.login, MAX_STRING_SIZE_LARGE, stdin);
-    c.login[strcspn(c.login, "\n")] = 0;
-
+    scanf(" %49[^\n]", c.login);
 
     printf("Enter password: ");
-    fgets(c.password, MAX_STRING_SIZE_LARGE, stdin);
-    c.password[strcspn(c.password, "\n")] = 0;
+    scanf(" %49[^\n]", c.password);
 
     encryptDecrypt(c.password); // encrypting password
 
@@ -127,11 +122,6 @@ void showCredentials() {
 
     printf("Which website credentials do you want to see (website name)? ");
     scanf(" %24[^\n]", name);
-
-    if (fgets(name, sizeof(name), stdin) == NULL) {
-        fclose(pFile);
-        return;
-    }
 
     name[strcspn(name, "\n")] = '\0'; // delete \n that could appear at the end
 
